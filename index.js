@@ -243,6 +243,6 @@ app.post('/find', (req, res) => {
 });
 
 
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
