@@ -5,9 +5,9 @@
   "main": "index.js",
   "author": "alphasec",
   "license": "MIT",
-   "dependencies": {
-  },
   "scripts": {
-    "start": "node index.js"
-  }
+    "start": "node app/index.js"
+  },
+  "devDependencies": {},
+  "keywords": []
 }
