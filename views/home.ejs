@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetHouse Animal Store - Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="hero">
+            <h2>Welcome to PetHouse Animal Store!</h2>
+            <p>Find your new best friend today.</p>
+            <a href="/find" class="button">Start Your Search</a>
+        </section>
+        <section class="about">
+            <div class="card">
+                <h3>Mission</h3>
+                <p>Connecting adoptable pets with caring people to create forever homes.</p>
+            </div>
+            <div class="card">
+                <h3>Vision</h3>
+                <p>A world where every pet has a loving family.</p>
+            </div>
+            <div class="card">
+                <h3>How We Work</h3>
+                <p>Learn about our adoption process and how you can contribute.</p>
+            </div>
+        </section>
+        <section class="about">
+            <div class="card" style="width: 1100px;">
+                <h2>Happy Adopters</h2>
+                <p>"PetHouse Animal Store changed our lives! We found our beloved furry friend through their adoption program. From the moment we stepped into their center, we felt the warmth and dedication of their staff. They guided us through the adoption process with care and professionalism, ensuring we found the perfect match for our family. Our new pet has brought so much joy and love into our home. Thank you, PetHouse Animal Store, for bringing us together!"</p>
+                <br>
+                <p>"I can't express enough gratitude to PetHouse Animal Store for helping me find my soulmate in fur form. After months of searching, I stumbled upon their website and decided to visit their center. From the first interaction, it was evident that they genuinely care about their animals and finding them loving homes. The adoption process was seamless, and the staff provided valuable advice on pet care. Now, my furry companion is not just a pet but a cherished member of my family. Thank you, PetHouse Animal Store, for making dreams come true!"</p>
+            </div>
+        </section>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

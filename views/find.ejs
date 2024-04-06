@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetHouse Animal Store - Find your pet</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="search-form">
+            <h2>Find a Dog/Cat</h2>
+            <form action="/find" method="post">
+                <div class="form-group">
+                    <label for="animaltype">Select Animal Type:</label>
+                    <select id="animaltype" name="animaltype">
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="any">Doesn't matter</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="breed">Breed:</label><br>
+                    <select id="breed" name="breed">
+                        <option value="labrador">Labrador</option>
+                        <option value="poodle">Poodle</option>
+                        <option value="siamese">Siamese</option>
+                        <option value="persian">Persian</option>
+                        <option value="bulldog">Bulldog</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="ragdoll">Ragdoll</option>
+                        <option value="maine-coon">Maine Coon</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="british-shorthair">British Shorthair</option>
+                        <option value="sphynx">Sphynx</option>
+                        <option value="german-shepherd">German Shepherd</option>
+                        <option value="any">Doesn't matter</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Preferred Age:</label>
+                    <select id="age" name="age">
+                        <option value="0-1">0-1 year</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5+">5+ years</option>
+                        <option value="any">Doesn't matter</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Preferred Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="any">Doesn't matter</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Compatibility:</label><br>
+                    <input type="checkbox" id="otherDogs" name="otherDogs">
+                    <label for="otherDogs">Gets along with other dogs</label><br>
+                    <input type="checkbox" id="otherCats" name="otherCats">
+                    <label for="otherCats">Gets along with other cats</label><br>
+                    <input type="checkbox" id="smallChildren" name="smallChildren">
+                    <label for="smallChildren">Gets along with small children</label><br>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+        <% if (filteredPets !== null && filteredPets.length > 0) { %>
+            <h2>Available Pets:</h2>
+            <ul>
+                <% filteredPets.forEach(pet => { %>
+                    <li>
+                        <strong>Listing No.:</strong> <%= pet.split(':')[0] %><br>
+                        <strong>Listing User:</strong> <%= pet.split(':')[1] %><br>
+                        <strong>Type:</strong> <%= pet.split(':')[2] %><br>
+                        <strong>Breed:</strong> <%= pet.split(':')[3] %><br>
+                        <strong>Age:</strong> <%= pet.split(':')[4] %><br>
+                        <strong>Gender:</strong> <%= pet.split(':')[5] %><br>
+                        <strong>Compatibility:</strong><br>
+                        <ul>
+                            <li>Gets along with other dogs: <%= pet.split(':')[6] === 'true' ? 'Yes' : 'No' %></li>
+                            <li>Gets along with other cats: <%= pet.split(':')[7] === 'true' ? 'Yes' : 'No' %></li>
+                            <li>Gets along with small children: <%= pet.split(':')[8] === 'true' ? 'Yes' : 'No' %></li>
+                        </ul>
+                    </li>
+                    <br>
+                <% }); %>
+            </ul>
+        <% } else if (filteredPets !== null) { %>
+            <p>No pets match your criteria.</p>
+        <% } %>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

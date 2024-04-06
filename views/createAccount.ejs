@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <h2 style="text-align: center;">Create an Account</h2>
+        <form style="text-align: center;" id="create-account-form" action="/createaccount" method="POST">
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px;" for="username">Username:</label>
+                <input style="width: 10%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;" type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label style="display: block; margin-bottom: 5px;" for="password">Password:</label>
+                <input style="width: 10%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;" type="password" id="password" name="password" required>
+                <p>Password must be at least 4 characters long and have at least 1 digit and 1 letter</p>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+        <div id="message" style="text-align: center; margin-top: 20px;">
+            <% if (message) { %>
+                <p><%= message %></p>
+            <% } %>
+        </div>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

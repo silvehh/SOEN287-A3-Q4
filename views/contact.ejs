@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetHouse Animal Store - Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="contact-cards">
+                <div class="card">
+                    <img src="/Images/name-icon.png" alt="Email Icon">
+                    <h3>Info</h3>
+                    <p>Name: Amro Atique</p>
+                    <p>Student ID: 40272828</p>
+                </div>
+                <div class="card">
+                    <img src="/Images/icon-email.jpg" alt="Email Icon">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:amromatique@gmail.com">amromatique@gmail.com</a></p>
+                </div>
+                <div class="card">
+                    <img src="/Images/icon-phone.jpg" alt="Phone Icon">
+                    <h3>Call Us</h3>
+                    <p>123-456-7890</p>
+                </div>
+                <div class="card">
+                    <img src="/Images/icon-location.png" alt="Location Icon">
+                    <h3>Visit Us</h3>
+                    <p>2812 random, Montreal</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

@@ -1,0 +1,395 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    padding-bottom: 50px;
+    padding-top: 220px;
+    
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    padding-left: 200px;
+}
+
+header .logo img {
+    max-height: 100px;
+}
+
+header a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover{
+    background-color: #555;
+}
+
+header a:active{
+    background-color: #ffffffa6;
+}
+
+
+.side-menu {
+    position: fixed;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    z-index: 0;
+    background-color: #424038;
+    color: #fff;
+}
+
+.side-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+    background-color: #555;
+}
+
+.side-menu ul li a:active {
+    background-color: #ffffffa6;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+main {
+    padding-top: 220px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 200px;
+    padding-bottom: 50px;
+}
+
+.hero {
+    background: url('/Images/background.jpg') no-repeat center center/cover;
+    color: #000000;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.about .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 30%;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+.contact-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-cards .card {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.contact-cards .card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-cards .card {
+        width: 80%;
+    }
+}
+.giveaway-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: inline;
+}
+
+.giveaway-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline;
+}
+
+.giveaway-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: inline;
+}
+
+.giveaway-form select,
+.giveaway-form input[type="text"],
+.giveaway-form input[type="email"],
+.giveaway-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.giveaway-form input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+.giveaway-form input[type="submit"],
+.giveaway-form input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.giveaway-form input[type="submit"]:hover,
+.giveaway-form input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+.dog-care .care-intro, .dog-care .more-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.care-tips .tip {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.care-tips .tip img {
+    margin-right: 20px;
+    width: 100px;
+}
+
+.cat-care .care-intro, .cat-care .more-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.browse-pets .pet-filters {
+    text-align: center;
+    padding: 20px;
+}
+
+.browse-pets .pet-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.browse-pets .pet {
+    width: calc(33% - 40px);
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.browse-pets .pet img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.button, button {
+    font-weight: normal;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+.button:hover, button:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn, button {
+    font-weight: normal;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover, button:hover {
+    background-color: white;
+    color: black;
+}
+
+.interested {
+    background-color: green;
+    color: rgb(0, 0, 0);
+}
+
+
+.search-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #45a049;
+}

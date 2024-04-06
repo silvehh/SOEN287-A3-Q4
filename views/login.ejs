@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <h1 style="text-align: center;">Login</h1>
+        <form style="text-align: center;" id="login-form">
+            <label style="display: block; margin-bottom: 5px;" for="username">Username:</label>
+            <input style="width: 10%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;" type="text" id="username" name="username" required>
+            <br>
+            <label style="display: block; margin-bottom: 5px;" for="password">Password:</label>
+            <input style="width: 10%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;" type="password" id="password" name="password" required>
+            <br>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        <div id="login-message"></div>
+    </main>
+    <%- include('footer') %>
+    <script src="/js/login.js"></script>
+</body>
+</html>

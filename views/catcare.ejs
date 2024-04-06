@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetHouse Animal Store - Cat Care</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="cat-care">
+        <section class="care-intro">
+            <h2>Cat Care Tips</h2>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>Cats are independent creatures, but they rely on us for food, shelter, love, and medical care. Here are some tips to help keep your cat healthy and happy.</p>
+        </section>
+        <section class="care-tips">
+            <div class="tip">
+                <img src="/Images/nutrition-icon.webp" alt="Nutrition">
+                <h3>Nutrition</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Feed your cat a balanced diet tailored to its age, health status, and lifestyle.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/environment-icon.jpg" alt="Environment">
+                <h3>Environment</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Provide a stimulating and safe environment with scratching posts, toys, and comfortable resting areas.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/grooming-icon-cat.jpg" alt="Grooming">
+                <h3>Grooming</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Regular grooming helps keep your cat's coat healthy and reduces shedding. Brush their coat and trim their nails regularly.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/training-icon-cat.webp" alt="Training">
+                <h3>Training</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Cats can be trained using positive reinforcement techniques. Start with litter box training and basic commands like come and stay.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/healthcare-icon-cat.jpeg" alt="Healthcare">
+                <h3>Healthcare</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Regular vet check-ups, vaccinations, and preventive care are essential for your cat's well-being.</p>
+            </div>
+        </section>
+        <section class="more-info">
+            <h2>Further Information</h2>
+            <p>For more comprehensive guides on cat care, check out our resources or contact us for advice.</p>
+            <a href="/contact" class="btn">Get in Touch</a>
+        </section>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

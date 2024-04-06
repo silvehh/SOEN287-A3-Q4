@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetHouse Animal Store - Dog Care</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="dog-care">
+        <section class="care-intro">
+            <h2>Dog Care Tips</h2>
+            <p>Ensuring your dog is healthy and happy involves regular care and maintenance. Below are essential tips every dog owner should follow.</p>
+        </section>
+        <section class="care-tips">
+            <div class="tip">
+                <img src="/Images/feeding-icon.jpg" alt="Feeding">
+                <h3>Feeding</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Offer a balanced diet specific to your dog's age, size, and health needs.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/exercise-icon.jpg" alt="Exercise">
+                <h3>Exercise</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Provide regular exercise to keep your dog physically fit and mentally stimulated.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/grooming-icon.jpg" alt="Grooming">
+                <h3>Grooming</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Regular grooming helps maintain your dog's coat and promotes bonding.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/training-icon.jpg" alt="Training">
+                <h3>Training</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Basic obedience training is essential for a well-behaved dog and strengthens your bond.</p>
+            </div>
+            <div class="tip">
+                <img src="/Images/healthcare-icon.jpg" alt="Healthcare">
+                <h3>Healthcare</h3>
+                <p>&nbsp;&nbsp;&nbsp;</p>
+                <p>Regular vet check-ups and vaccinations are crucial for your dog's health and well-being.</p>
+            </div>
+        </section>
+        <section class="more-info">
+            <h2>Learn More</h2>
+            <p>For more detailed information on caring for your dog, visit our resources page or contact us directly.</p>
+            <a href="/contact" class="btn">Contact Us</a>
+        </section>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

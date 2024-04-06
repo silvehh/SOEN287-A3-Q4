@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PetHouse Animal Store - Give Away Your Pet</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/JavaScript7.js"></script>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/logout" id="logout-link">Log Out</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="giveaway">
+        <section class="giveaway-form">
+            <h2>Have a Pet to Give Away</h2>
+            <form action="#" method="post" onsubmit="return validateGiveAwayForm()">
+                <label for="pettype">Cat or Dog:</label>
+                <select id="pettype" name="pettype">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                </select><br>
+                <label for="breed">Breed:</label>
+                <select id="breed" name="breed">
+                    <option value="labrador">Labrador</option>
+                    <option value="poodle">Poodle</option>
+                    <option value="siamese">Siamese</option>
+                    <option value="persian">Persian</option>
+                    <option value="bulldog">Bulldog</option>
+                    <option value="beagle">Beagle</option>
+                    <option value="ragdoll">Ragdoll</option>
+                    <option value="maine-coon">Maine Coon</option>
+                    <option value="golden-retriever">Golden Retriever</option>
+                    <option value="british-shorthair">British Shorthair</option>
+                    <option value="sphynx">Sphynx</option>
+                    <option value="german-shepherd">German Shepherd</option>
+                </select><br>
+                <label for="age">Age:</label>
+                <select id="age" name="age">
+                    <option value="0-1">0-1 year</option>
+                    <option value="1-3">1-3 years</option>
+                    <option value="3-5">3-5 years</option>
+                    <option value="5+">5+ years</option>
+                </select><br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br>
+                <input type="checkbox" id="otherdogs" name="otherDogs">
+                <label for="otherdogs">Gets along with other dogs</label><br>
+                <input type="checkbox" id="othercats" name="otherCats">
+                <label for="othercats">Gets along with other cats</label><br>
+                <input type="checkbox" id="smallchildren" name="smallChildren">
+                <label for="smallchildren">Suitable for a family with small children</label><br>
+                <label for="comments">Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+                <label for="ownername">Owner's Name:</label>
+                <input type="text" id="ownername" name="ownername" placeholder="Family and Given Name" required><br>
+                <label for="owneremail">Owner's Email:</label>
+                <input type="email" id="owneremail" name="owneremail" required><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </form>
+            <p id="response">
+                <% if (typeof responseMessage !== 'undefined') { %>
+                    <%= responseMessage %>
+                <% } %>
+            </p>               
+        </section>
+    </main>
+    <%- include('footer') %>
+</body>
+</html>

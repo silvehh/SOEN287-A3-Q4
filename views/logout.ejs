@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <%- include('header') %>
+    <div class="side-menu">
+        <nav>
+            <ul style="padding-top: 200px;">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/find">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare">Dog Care</a></li>
+                <li><a href="/catCare">Cat Care</a></li>
+                <li><a href="/giveaway">Give Away a Pet</a></li>
+                <li><a href="/createAccount">Create an Account</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="container">
+        <h1 style="text-align: center;">Logout</h1>
+        <p style="text-align: center;">Are you sure you want to log out?</p>
+        <form style="text-align: center;" action="/logout" method="POST">
+            <button type="submit">Log Out</button>
+        </form>
+    </main>
+    <%- include('footer') %>
+    <script src="/js/logout.js"></script>
+</body>
+</html>
