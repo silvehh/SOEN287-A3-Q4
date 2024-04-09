@@ -110,21 +110,21 @@ app.post('/createAccount', (req, res) => {
 
     const usernameRegex = /^[a-zA-Z0-9]+$/;
     if (!usernameRegex.test(username)) {
-        return res.render('createaccount', { message: 'Invalid username format. Only letters and digits are allowed.' });
+        return res.render('createAccount', { message: 'Invalid username format. Only letters and digits are allowed.' });
     }
 
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
     if (!passwordRegex.test(password)) {
-        return res.render('createaccount', { message: 'Invalid password format. Password must be at least 4 characters long and contain at least one letter and one digit.' });
+        return res.render('createAccount', { message: 'Invalid password format. Password must be at least 4 characters long and contain at least one letter and one digit.' });
     }
 
     const existingUsers = readUserAccounts();
     if (existingUsers.some(user => user.username === username)) {
-        return res.render('createaccount', { message: 'Username already exists. Please choose a different username.' });
+        return res.render('createAccount', { message: 'Username already exists. Please choose a different username.' });
     }
 
     writeUserAccount(username, password);
-    return res.render('createaccount', { message: 'Account created successfully. You can now login.' });
+    return res.render('createAccount', { message: 'Account created successfully. You can now login.' });
 });
 
 
