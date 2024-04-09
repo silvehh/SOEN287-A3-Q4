@@ -11,7 +11,6 @@ const path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 const usersfilePath = path.join(__dirname,'views','users.txt');
 const petfilePath = path.join(__dirname, 'views','pet_information.txt');
-console.log(usersfilePath);
 
 
 app.set('view engine', 'ejs');
