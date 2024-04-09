@@ -199,7 +199,7 @@ app.post('/logout', (req, res) => {
 });
 
 function getAllPets() {
-    const data = fs.readFileSync('petfilePath', 'utf8');
+    const data = fs.readFileSync(petfilePath, 'utf8');
     const lines = data.split('\n');
 
     const pets = lines.map(line => {
@@ -221,7 +221,7 @@ app.post('/find', (req, res) => {
     const catsCompatibility = otherCats === 'on';
     const childrenCompatibility = smallChildren === 'on';
 
-    fs.readFile('petfilePath', 'utf8', (err, data) => {
+    fs.readFile(petfilePath, 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).send('Internal Server Error');
