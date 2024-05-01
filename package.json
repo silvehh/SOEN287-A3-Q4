@@ -29,7 +29,7 @@
     "cookie": "^0.6.0",
     "cookie-parser": "^1.4.6",
     "cookie-signature": "^1.0.6",
-    "debug": "^2.6.9",
+    "debug": "^4.3.4",
     "define-data-property": "^1.1.4",
     "depd": "^2.0.0",
     "destroy": "^1.2.0",
